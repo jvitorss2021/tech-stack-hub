@@ -114,6 +114,152 @@ const tabs = [
             description: "Framework CSS mais popular do mundo",
             icon: "🅱️"
           },
+          {
+            name: "Sass",
+            url: "https://sass-lang.com/",
+            description: "Pré-processador CSS com recursos avançados",
+            icon: "💅"
+          },
+          {
+            name: "Styled Components",
+            url: "https://styled-components.com/",
+            description: "CSS-in-JS com suporte a temas e props",
+            icon: "💅"
+          },
+          {
+            name: "Emotion",
+            url: "https://emotion.sh/",
+            description: "Biblioteca CSS-in-JS performática",
+            icon: "👩‍🎤"
+          },
+          {
+            name: "Stitches",
+            url: "https://stitches.dev/",
+            description: "CSS-in-JS com zero runtime",
+            icon: "🧵"
+          }
+        ]
+      },
+      {
+        category: "Gerenciamento de Estado",
+        items: [
+          {
+            name: "Redux Toolkit",
+            url: "https://redux-toolkit.js.org/",
+            description: "Gerenciamento de estado com Redux simplificado",
+            icon: "🔄"
+          },
+          {
+            name: "Zustand",
+            url: "https://zustand-demo.pmnd.rs/",
+            description: "Gerenciamento de estado minimalista",
+            icon: "🐻"
+          },
+          {
+            name: "Jotai",
+            url: "https://jotai.org/",
+            description: "Estado primitivo e atômico para React",
+            icon: "⚛️"
+          },
+          {
+            name: "TanStack Query",
+            url: "https://tanstack.com/query/",
+            description: "Gerenciamento de estado assíncrono",
+            icon: "🔄"
+          },
+          {
+            name: "Recoil",
+            url: "https://recoiljs.org/",
+            description: "Gerenciamento de estado do Facebook",
+            icon: "⚛️"
+          }
+        ]
+      },
+      {
+        category: "Frameworks Frontend",
+        items: [
+          {
+            name: "Next.js",
+            url: "https://nextjs.org/",
+            description: "Framework React com SSR e SSG",
+            icon: "▲"
+          },
+          {
+            name: "Remix",
+            url: "https://remix.run/",
+            description: "Framework web fullstack com React",
+            icon: "💿"
+          },
+          {
+            name: "Astro",
+            url: "https://astro.build/",
+            description: "Framework para sites orientados a conteúdo",
+            icon: "🚀"
+          },
+          {
+            name: "Gatsby",
+            url: "https://www.gatsbyjs.com/",
+            description: "Framework para sites estáticos com React",
+            icon: "💜"
+          }
+        ]
+      },
+      {
+        category: "Animação e Interatividade",
+        items: [
+          {
+            name: "Framer Motion",
+            url: "https://www.framer.com/motion/",
+            description: "Biblioteca de animações para React",
+            icon: "🎬"
+          },
+          {
+            name: "GSAP",
+            url: "https://greensock.com/gsap/",
+            description: "Biblioteca profissional de animações",
+            icon: "🎭"
+          },
+          {
+            name: "AutoAnimate",
+            url: "https://auto-animate.formkit.com/",
+            description: "Animações automáticas para qualquer framework",
+            icon: "✨"
+          },
+          {
+            name: "React Spring",
+            url: "https://react-spring.dev/",
+            description: "Animações baseadas em física para React",
+            icon: "🌱"
+          }
+        ]
+      },
+      {
+        category: "Formulários e Validação",
+        items: [
+          {
+            name: "React Hook Form",
+            url: "https://react-hook-form.com/",
+            description: "Formulários performáticos com hooks",
+            icon: "📝"
+          },
+          {
+            name: "Formik",
+            url: "https://formik.org/",
+            description: "Solução completa para formulários React",
+            icon: "📋"
+          },
+          {
+            name: "React Final Form",
+            url: "https://final-form.org/react",
+            description: "Formulários de alto desempenho",
+            icon: "✍️"
+          },
+          {
+            name: "TanStack Form",
+            url: "https://tanstack.com/form/",
+            description: "Formulários headless e type-safe",
+            icon: "📑"
+          }
         ]
       }
     ]
@@ -137,6 +283,71 @@ const tabs = [
             description: "Framework Node.js progressivo",
             icon: "🐱"
           },
+          {
+            name: "Fastify",
+            url: "https://www.fastify.io/",
+            description: "Framework web extremamente rápido para Node.js",
+            icon: "⚡"
+          },
+          {
+            name: "Koa",
+            url: "https://koajs.com/",
+            description: "Framework web minimalista da equipe do Express",
+            icon: "🎯"
+          }
+        ]
+      },
+      {
+        category: "Autenticação e Segurança",
+        items: [
+          {
+            name: "JWT",
+            url: "https://jwt.io/",
+            description: "JSON Web Tokens para autenticação segura",
+            icon: "🔑"
+          },
+          {
+            name: "Bcrypt",
+            url: "https://www.npmjs.com/package/bcrypt",
+            description: "Biblioteca para hash de senhas",
+            icon: "🔒"
+          },
+          {
+            name: "Passport.js",
+            url: "https://www.passportjs.org/",
+            description: "Middleware de autenticação para Node.js",
+            icon: "🛂"
+          },
+          {
+            name: "Auth.js",
+            url: "https://authjs.dev/",
+            description: "Solução de autenticação completa para Next.js",
+            icon: "🔐"
+          },
+          {
+            name: "Clerk",
+            url: "https://clerk.com/",
+            description: "Autenticação e gerenciamento de usuários completo",
+            icon: "👤"
+          },
+          {
+            name: "Argon2",
+            url: "https://www.npmjs.com/package/argon2",
+            description: "Algoritmo de hash mais seguro",
+            icon: "🛡️"
+          },
+          {
+            name: "Helmet",
+            url: "https://helmetjs.github.io/",
+            description: "Middleware para segurança de cabeçalhos HTTP",
+            icon: "⛑️"
+          },
+          {
+            name: "CORS",
+            url: "https://www.npmjs.com/package/cors",
+            description: "Middleware para configuração de CORS",
+            icon: "🌐"
+          }
         ]
       },
       {
@@ -154,6 +365,47 @@ const tabs = [
             description: "ORM que pode ser executado em várias plataformas",
             icon: "🔧"
           },
+          {
+            name: "Sequelize",
+            url: "https://sequelize.org/",
+            description: "ORM Node.js para PostgreSQL, MySQL, SQLite e mais",
+            icon: "🗄️"
+          },
+          {
+            name: "Mongoose",
+            url: "https://mongoosejs.com/",
+            description: "Modelagem de objetos MongoDB elegante",
+            icon: "🍃"
+          }
+        ]
+      },
+      {
+        category: "Validação e Sanitização",
+        items: [
+          {
+            name: "Zod",
+            url: "https://zod.dev/",
+            description: "Validação de esquemas com TypeScript",
+            icon: "✅"
+          },
+          {
+            name: "Joi",
+            url: "https://joi.dev/",
+            description: "Validação de dados poderosa para JavaScript",
+            icon: "📝"
+          },
+          {
+            name: "Yup",
+            url: "https://github.com/jquense/yup",
+            description: "Construtor de esquemas para validação de valores",
+            icon: "🎯"
+          },
+          {
+            name: "Express Validator",
+            url: "https://express-validator.github.io/",
+            description: "Validação e sanitização para Express.js",
+            icon: "🧹"
+          }
         ]
       }
     ]
