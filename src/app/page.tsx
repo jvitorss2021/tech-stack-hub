@@ -407,6 +407,213 @@ const tabs = [
             icon: "🧹"
           }
         ]
+      },
+      {
+        category: "TypeScript Backend",
+        items: [
+          {
+            name: "tRPC",
+            url: "https://trpc.io/",
+            description: "End-to-end typesafe APIs para TypeScript",
+            icon: "🔷"
+          },
+          {
+            name: "TypeGraphQL",
+            url: "https://typegraphql.com/",
+            description: "Framework GraphQL moderno com TypeScript",
+            icon: "📊"
+          },
+          {
+            name: "Ts.ED",
+            url: "https://tsed.io/",
+            description: "Framework Node.js para TypeScript",
+            icon: "🎯"
+          },
+          {
+            name: "NestJS",
+            url: "https://nestjs.com/",
+            description: "Framework Node.js progressivo com TypeScript",
+            icon: "🐈"
+          },
+          {
+            name: "TypeORM",
+            url: "https://typeorm.io/",
+            description: "ORM para TypeScript e JavaScript",
+            icon: "🗃️"
+          },
+          {
+            name: "Prisma",
+            url: "https://www.prisma.io/",
+            description: "ORM de próxima geração para Node.js/TypeScript",
+            icon: "💎"
+          },
+          {
+            name: "Fastify TypeScript",
+            url: "https://www.fastify.io/docs/latest/Reference/TypeScript/",
+            description: "Framework web rápido com suporte TypeScript",
+            icon: "⚡"
+          },
+          {
+            name: "TypeDI",
+            url: "https://github.com/typestack/typedi",
+            description: "Container de injeção de dependência",
+            icon: "💉"
+          },
+          {
+            name: "Routing Controllers",
+            url: "https://github.com/typestack/routing-controllers",
+            description: "Decorators para roteamento em Express/Koa",
+            icon: "🛣️"
+          },
+          {
+            name: "Class Validator",
+            url: "https://github.com/typestack/class-validator",
+            description: "Validação baseada em decorators",
+            icon: "✅"
+          },
+          {
+            name: "Type-GraphQL",
+            url: "https://typegraphql.com/",
+            description: "GraphQL com decorators TypeScript",
+            icon: "🎯"
+          },
+          {
+            name: "TSyringe",
+            url: "https://github.com/microsoft/tsyringe",
+            description: "Container de injeção de dependência leve",
+            icon: "💉"
+          }
+        ]
+      },
+      {
+        category: "C# e .NET",
+        items: [
+          {
+            name: "ASP.NET Core",
+            url: "https://dotnet.microsoft.com/apps/aspnet",
+            description: "Framework web multiplataforma da Microsoft",
+            icon: "🌐"
+          },
+          {
+            name: "Entity Framework Core",
+            url: "https://learn.microsoft.com/ef/core/",
+            description: "ORM moderno para .NET",
+            icon: "📦"
+          },
+          {
+            name: "Dapper",
+            url: "https://github.com/DapperLib/Dapper",
+            description: "Micro ORM simples e de alta performance",
+            icon: "⚡"
+          },
+          {
+            name: "MediatR",
+            url: "https://github.com/jbogard/MediatR",
+            description: "Implementação do padrão Mediator",
+            icon: "📡"
+          },
+          {
+            name: "AutoMapper",
+            url: "https://automapper.org/",
+            description: "Mapeamento de objetos para .NET",
+            icon: "🗺️"
+          },
+          {
+            name: "FluentValidation",
+            url: "https://fluentvalidation.net/",
+            description: "Biblioteca de validação para .NET",
+            icon: "✅"
+          },
+          {
+            name: "Hangfire",
+            url: "https://www.hangfire.io/",
+            description: "Agendamento de tarefas em background",
+            icon: "⏰"
+          },
+          {
+            name: "SignalR",
+            url: "https://dotnet.microsoft.com/apps/aspnet/signalr",
+            description: "Biblioteca para comunicação em tempo real",
+            icon: "🔌"
+          },
+          {
+            name: "Serilog",
+            url: "https://serilog.net/",
+            description: "Logging estruturado para .NET",
+            icon: "📝"
+          },
+          {
+            name: "Polly",
+            url: "https://github.com/App-vNext/Polly",
+            description: "Resiliência e tratamento de falhas",
+            icon: "🛡️"
+          },
+          {
+            name: "IdentityServer",
+            url: "https://duendesoftware.com/products/identityserver",
+            description: "Framework de autenticação e autorização",
+            icon: "🔐"
+          },
+          {
+            name: "Quartz.NET",
+            url: "https://www.quartz-scheduler.net/",
+            description: "Agendamento de tarefas robusto",
+            icon: "⌚"
+          },
+          {
+            name: "RestSharp",
+            url: "https://restsharp.dev/",
+            description: "Cliente HTTP simplificado",
+            icon: "🌐"
+          },
+          {
+            name: "xUnit",
+            url: "https://xunit.net/",
+            description: "Framework de testes unitários",
+            icon: "🧪"
+          },
+          {
+            name: "Moq",
+            url: "https://github.com/moq/moq4",
+            description: "Framework de mocking para testes",
+            icon: "🎭"
+          },
+          {
+            name: "Bogus",
+            url: "https://github.com/bchavez/Bogus",
+            description: "Geração de dados fake para testes",
+            icon: "🎲"
+          }
+        ]
+      },
+      {
+        category: "Ferramentas de Desenvolvimento",
+        items: [
+          {
+            name: "Visual Studio",
+            url: "https://visualstudio.microsoft.com/",
+            description: "IDE completa para .NET e C#",
+            icon: "💻"
+          },
+          {
+            name: "Rider",
+            url: "https://www.jetbrains.com/rider/",
+            description: "IDE multiplataforma para .NET",
+            icon: "🏍️"
+          },
+          {
+            name: "ts-node",
+            url: "https://typestrong.org/ts-node/",
+            description: "Execução de TypeScript no Node.js",
+            icon: "🟦"
+          },
+          {
+            name: "NSwag",
+            url: "https://github.com/RicoSuter/NSwag",
+            description: "Geração de Swagger/OpenAPI para .NET",
+            icon: "📚"
+          }
+        ]
       }
     ]
   }
