@@ -1,12 +1,22 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { particlesConfig } from "./particles-config";
 
 interface ParticlesProps {
   className?: string;
   quantity?: number;
   refresh?: boolean;
+}
+
+interface Circle {
+  x: number;
+  y: number;
+  size: number;
+  alpha: number;
+  dx: number;
+  dy: number;
+  color: string;
 }
 
 export default function Particles({
@@ -17,33 +27,18 @@ export default function Particles({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
-  const circles = useRef<any[]>([]);
+  const circles = useRef<Circle[]>([]);
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
 
-  useEffect(() => {
-    if (canvasRef.current) {
-      context.current = canvasRef.current.getContext("2d");
+  const drawParticles = useCallback(() => {
+    circles.current.length = 0;
+    for (let i = 0; i < quantity; i++) {
+      circles.current.push(circleParams());
     }
-    initCanvas();
-    animate();
-    window.addEventListener("resize", initCanvas);
+  }, [quantity]);
 
-    return () => {
-      window.removeEventListener("resize", initCanvas);
-    };
-  }, []);
-
-  useEffect(() => {
-    initCanvas();
-  }, [refresh]);
-
-  const initCanvas = () => {
-    resizeCanvas();
-    drawParticles();
-  };
-
-  const resizeCanvas = () => {
+  const resizeCanvas = useCallback(() => {
     if (canvasContainerRef.current && canvasRef.current && context.current) {
       circles.current.length = 0;
       canvasSize.current.w = window.innerWidth;
@@ -54,9 +49,14 @@ export default function Particles({
       canvasRef.current.style.height = `${canvasSize.current.h}px`;
       context.current.scale(dpr, dpr);
     }
-  };
+  }, [dpr]);
 
-  const circleParams = (): any => {
+  const initCanvas = useCallback(() => {
+    resizeCanvas();
+    drawParticles();
+  }, [resizeCanvas, drawParticles]);
+
+  const circleParams = useCallback((): Circle => {
     const x = Math.floor(Math.random() * canvasSize.current.w);
     const y = Math.floor(Math.random() * canvasSize.current.h);
     const size = Math.random() * (particlesConfig.size.max - particlesConfig.size.min) + particlesConfig.size.min;
@@ -74,16 +74,9 @@ export default function Particles({
       dy,
       color
     };
-  };
+  }, []);
 
-  const drawParticles = () => {
-    circles.current.length = 0;
-    for (let i = 0; i < quantity; i++) {
-      circles.current.push(circleParams());
-    }
-  };
-
-  const drawCircle = (circle: any) => {
+  const drawCircle = useCallback((circle: Circle) => {
     if (context.current) {
       const { x, y, size, alpha, color } = circle;
       context.current.beginPath();
@@ -101,9 +94,9 @@ export default function Particles({
       if (circle.y < 0) circle.y = canvasSize.current.h;
       if (circle.y > canvasSize.current.h) circle.y = 0;
     }
-  };
+  }, []);
 
-  const animate = () => {
+  const animate = useCallback(() => {
     if (context.current) {
       context.current.clearRect(0, 0, canvasSize.current.w, canvasSize.current.h);
       circles.current.forEach(circle => {
@@ -111,7 +104,24 @@ export default function Particles({
       });
       requestAnimationFrame(animate);
     }
-  };
+  }, [drawCircle]);
+
+  useEffect(() => {
+    if (canvasRef.current) {
+      context.current = canvasRef.current.getContext("2d");
+    }
+    initCanvas();
+    animate();
+    window.addEventListener("resize", initCanvas);
+
+    return () => {
+      window.removeEventListener("resize", initCanvas);
+    };
+  }, [initCanvas, animate]);
+
+  useEffect(() => {
+    initCanvas();
+  }, [refresh, initCanvas]);
 
   return (
     <div className={`fixed inset-0 pointer-events-none ${className}`} ref={canvasContainerRef}>
