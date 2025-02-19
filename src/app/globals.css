@@ -17,6 +17,17 @@
       rgb(var(--background-start-rgb)),
       rgb(var(--background-end-rgb))
     );
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  canvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
   }
 }
 

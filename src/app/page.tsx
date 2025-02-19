@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { IconBrandGithub } from "@tabler/icons-react";
+import Particles from "@/components/ui/particles";
 
 const tabs = [
   {
@@ -623,8 +624,18 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-950 to-neutral-900">
-      <main className="container mx-auto px-4 py-16 max-w-6xl">
+    <div className="min-h-screen relative">
+      {/* Fundo gradiente */}
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 to-neutral-900" />
+      
+      {/* Partículas */}
+      <Particles
+        className="absolute inset-0 z-[1]"
+        quantity={150}
+      />
+      
+      {/* Conteúdo */}
+      <main className="container mx-auto px-4 py-16 max-w-6xl relative z-[2]">
         <div className="text-center mb-16 space-y-4">
           <h1 className="text-5xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">
             Tech Stack Hub
